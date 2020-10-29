@@ -5,6 +5,7 @@
         <mt-button icon="back"></mt-button>
       </router-link>
     </mt-header>
+    <router-view></router-view>
   </div>
 </template>
 

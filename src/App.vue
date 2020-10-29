@@ -9,15 +9,11 @@
         <router-link to="/search" slot="right">
           <mt-button icon="search"></mt-button>
         </router-link>
-      </mt-header>
-        <!-- 列表导航 -->
-        <router-view name="nav"></router-view>
-        <router-view name="searchBar"></router-view>
+      </mt-header>  
     </div>
     <!-- 内容 -->
     <div id="contain">
-
-    <router-view></router-view>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -29,10 +25,10 @@ Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);
 
 export default {
-  async created() {
-    let data = await this.$axios.get("/api/?json=true");
-    console.log(data);
-  },
+  // async created() {
+  //   let data = await this.$axios.get("/api/?json=true");
+  //   console.log(data);
+  // },
 };
 </script>
 
@@ -52,9 +48,7 @@ export default {
   }
 }
 
-#contain{
-  
-    margin-top: 5.375rem;
-  
+#contain {
+  margin-top: 2rem;
 }
 </style>

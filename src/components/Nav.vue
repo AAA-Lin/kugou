@@ -9,6 +9,7 @@
         >{{ item.meta.title }}</mt-tab-item
       >
     </mt-navbar>
+    <router-view></router-view>
   </div>
 </template>
 

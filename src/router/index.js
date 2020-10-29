@@ -3,20 +3,29 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import navs from './nav'
+import Nav from '@/components/Nav'
 import Search from '@/views/Search'
 import searchBar from '@/components/searchBar';
 const routes = [
     {
         path:"/",
-        redirect:"/newsong"
+        redirect:"/newsong",
+        component:Nav,
+        children:[
+            ...navs,
+        ]
     },
-    ...navs,
+    
     {
         path:"/search",
-        components:{
-            default:Search,
-            searchBar
-        }
+        name:"search",
+        component:searchBar,
+        children:[
+            {
+                path:"",
+                component:Search
+            }
+        ]
     }
     
 ]
