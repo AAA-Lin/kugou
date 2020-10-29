@@ -3,9 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import 'mint-ui/lib/style.css'
+import '@/assets/base.css'
+
 Vue.config.productionTip = false
 import axios from "axios"
 Vue.prototype.$axios = axios
+
 
 new Vue({
   router,
