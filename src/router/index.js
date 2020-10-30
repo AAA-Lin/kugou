@@ -6,6 +6,9 @@ import navs from './nav'
 import Nav from '@/components/Nav'
 import Search from '@/views/Search'
 import searchBar from '@/components/searchBar';
+import singerList from '@/components/singerList';
+import singerInfo from '@/views/singerInfo';
+import Songer from '@/views/Songer';
 const routes = [
     {
         path:"/",
@@ -22,10 +25,28 @@ const routes = [
         component:searchBar,
         children:[
             {
-                path:"",
+                path:"/search",
                 component:Search
             }
         ]
+    },
+    {
+        path:"/singer/list/:id",
+        name:"singerlist",
+        component:singerList,
+        props:true,
+        children:[
+            {
+                path:"/singer/list/:id",
+                component:singerInfo
+            }
+        ]  
+    },
+    {
+        path:"/singer/info/:id",
+        name:"singerinfo",
+        component:Songer,
+        props:true 
     }
     
 ]

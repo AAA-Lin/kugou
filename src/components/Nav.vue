@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       navs,
-      selected: "newsong",
+      selected:this.$route.name,
     };
   },
   methods: {

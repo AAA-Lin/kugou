@@ -10,7 +10,9 @@ Vue.config.productionTip = false
 import axios from "axios"
 Vue.prototype.$axios = axios
 
-
+Vue.filter("filterImg",(inp,size)=>{
+  return inp.replace(/{size}/,size)
+})
 new Vue({
   router,
   store,
